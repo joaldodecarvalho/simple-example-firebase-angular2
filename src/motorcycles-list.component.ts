@@ -11,11 +11,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
           <td>
             <button (click)="onEdit(motorcycle)" class="btn btn-primary">
               <span class="glyphicon glyphicon-pencil"></span>
-              <span class="hidden-xs">Edit</span>
             </button>
             <button (click)="onRemove(motorcycle)" class="btn btn-danger">
               <span class="glyphicon glyphicon-trash"></span>
-              <span class="hidden-xs">Delete</span>
             </button>
           </td>
         </tr>

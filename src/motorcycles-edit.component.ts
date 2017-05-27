@@ -11,11 +11,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
           placeholder="Ano" style="width: 50%;">
         <button (click)="onSave()" class="btn btn-primary">
           <span class="glyphicon glyphicon-ok"></span>
-          <span class="hidden-xs">Save</span>
         </button>
         <button (click)="onClear()" class="btn btn-warning">
           <span class="glyphicon glyphicon-remove"></span>
-          <span class="hidden-xs">Clear</span>
         </button>
       </div>
     </div>
@@ -23,7 +21,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class MotorcyclesEditComponent {
 
-  @Input() motorcycles = {};
+  @Input() motorcycle = {};
   @Output() clear = new EventEmitter();
   @Output() save = new EventEmitter();
 
@@ -32,7 +30,7 @@ export class MotorcyclesEditComponent {
   }
 
   onSave() {
-    this.save.emit(this.motorcycles);
+    this.save.emit(this.motorcycle);
   }
 
 }

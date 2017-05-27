@@ -20,7 +20,7 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         execute: function() {
             MotorcyclesEditComponent = (function () {
                 function MotorcyclesEditComponent() {
-                    this.motorcycles = {};
+                    this.motorcycle = {};
                     this.clear = new core_1.EventEmitter();
                     this.save = new core_1.EventEmitter();
                 }
@@ -28,12 +28,12 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                     this.clear.emit();
                 };
                 MotorcyclesEditComponent.prototype.onSave = function () {
-                    this.save.emit(this.motorcycles);
+                    this.save.emit(this.motorcycle);
                 };
                 __decorate([
                     core_1.Input(), 
                     __metadata('design:type', Object)
-                ], MotorcyclesEditComponent.prototype, "motorcycles", void 0);
+                ], MotorcyclesEditComponent.prototype, "motorcycle", void 0);
                 __decorate([
                     core_1.Output(), 
                     __metadata('design:type', Object)
@@ -45,7 +45,7 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 MotorcyclesEditComponent = __decorate([
                     core_1.Component({
                         selector: 'motorcycle-edit',
-                        template: "\n    <div class=\"panel panel-primary\">\n      <div class=\"panel-body\">\n        <input type=\"text\" [(ngModel)]=\"motorcycle.modelo\"\n          placeholder=\"Modelo\" style=\"width: 25%;\">\n        <input type=\"number\" [(ngModel)]=\"motorcycle.ano\"\n          placeholder=\"Ano\" style=\"width: 50%;\">\n        <button (click)=\"onSave()\" class=\"btn btn-primary\">\n          <span class=\"glyphicon glyphicon-ok\"></span>\n          <span class=\"hidden-xs\">Save</span>\n        </button>\n        <button (click)=\"onClear()\" class=\"btn btn-warning\">\n          <span class=\"glyphicon glyphicon-remove\"></span>\n          <span class=\"hidden-xs\">Clear</span>\n        </button>\n      </div>\n    </div>\n  ",
+                        template: "\n    <div class=\"panel panel-primary\">\n      <div class=\"panel-body\">\n        <input type=\"text\" [(ngModel)]=\"motorcycle.modelo\"\n          placeholder=\"Modelo\" style=\"width: 25%;\">\n        <input type=\"number\" [(ngModel)]=\"motorcycle.ano\"\n          placeholder=\"Ano\" style=\"width: 50%;\">\n        <button (click)=\"onSave()\" class=\"btn btn-primary\">\n          <span class=\"glyphicon glyphicon-ok\"></span>\n        </button>\n        <button (click)=\"onClear()\" class=\"btn btn-warning\">\n          <span class=\"glyphicon glyphicon-remove\"></span>\n        </button>\n      </div>\n    </div>\n  ",
                     }), 
                     __metadata('design:paramtypes', [])
                 ], MotorcyclesEditComponent);
