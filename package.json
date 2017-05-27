@@ -1,6 +1,6 @@
 {
-  "name": "shared-bookmarks",
-  "version": "1.1.1",
+  "name": "example-firebase",
+  "version": "1.0.0",
   "scripts": {
     "build": "tsc",
     "serve": "tsc && concurrently \"tsc -w\" lite-server"

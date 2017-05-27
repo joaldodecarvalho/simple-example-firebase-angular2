@@ -3,20 +3,30 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'motorcycle-edit',
   template: `
-    <div class="panel panel-primary">
-      <div class="panel-body">
+      <div class="form-group">
+        <label for="modelo" class="col-lg-2 control-label">Modelo</label>
         <input type="text" [(ngModel)]="motorcycle.modelo"
-          placeholder="Modelo" style="width: 25%;">
-        <input type="number" [(ngModel)]="motorcycle.ano"
-          placeholder="Ano" style="width: 50%;">
-        <button (click)="onSave()" class="btn btn-primary">
-          <span class="glyphicon glyphicon-ok"></span>
-        </button>
-        <button (click)="onClear()" class="btn btn-warning">
-          <span class="glyphicon glyphicon-remove"></span>
-        </button>
+            placeholder="Modelo">
       </div>
-    </div>
+      <div class="form-group">
+        <label for="ano" class="col-lg-2 control-label">Ano</label>
+          <input type="number" [(ngModel)]="motorcycle.ano"
+            placeholder="Ano">
+      </div>
+      <div class="form-group">
+        <label for="imagem" class="col-lg-2 control-label">Url Imagem</label>
+          <input type="text" [(ngModel)]="motorcycle.urlImage"
+            placeholder="URL Imagem" style="width: 50%;">
+      </div>      
+
+      <button (click)="onSave()" class="btn btn-success">
+        <span class="glyphicon glyphicon-ok"></span>
+        <span class="hidden-xs">Salvar</span>
+      </button>
+      <button (click)="onClear()" class="btn btn-warning">
+        <span class="glyphicon glyphicon-remove"></span>
+        <span class="hidden-xs">Limpar</span>
+      </button>
   `,
 })
 export class MotorcyclesEditComponent {

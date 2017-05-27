@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
         <tr *ngFor="let motorcycle of motorcycles">
           <td class="hidden-xs hidden-sm">{{motorcycle.modelo}}</td>
           <td class="hidden-xs hidden-sm">{{motorcycle.ano}}</td>
+          <td class="hidden-xs hidden-sm">{{motorcycle.imagemUrl}}</td>
           <td>
             <button (click)="onEdit(motorcycle)" class="btn btn-primary">
               <span class="glyphicon glyphicon-pencil"></span>
@@ -16,6 +17,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
               <span class="glyphicon glyphicon-trash"></span>
             </button>
           </td>
+          
+          <img *ngIf="motorcycle.urlImage" src="{{motorcycle.urlImage}}" alt="Imagem {{motorcycle.modelo}}" 
+            height="250" width="350">
         </tr>
       </table>
     </div>

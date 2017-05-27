@@ -33,7 +33,8 @@ export class MotorcyclesService {
   updateMotorcycle(motorcycle) {
     const json = JSON.stringify({
       modelo: motorcycle.modelo,
-      ano: motorcycle.ano
+      ano: motorcycle.ano,
+      urlImage: motorcycle.urlImage
     });
     return this.http.patch(`${this.baseUrl}/${this.collection}/${motorcycle.id}.json`, json)
       .toPromise()
@@ -45,7 +46,8 @@ export class MotorcyclesService {
       .map(id => ({
         id: id,
         modelo: parsedResponse[id].modelo,
-        ano: parsedResponse[id].ano
+        ano: parsedResponse[id].ano,
+        urlImage: parsedResponse[id].urlImage
       }))
       .sort((a, b) => a.modelo.localeCompare(b.modelo));
   }
